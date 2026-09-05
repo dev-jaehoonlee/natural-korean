@@ -1,0 +1,22 @@
+{
+  "name": "natural-korean",
+  "version": "1.0.0",
+  "description": "쉽고 정확한 어휘로 명료하고 자연스러운 한국어를 쓰도록 돕는 출력 스타일과 교정 스킬입니다.",
+  "author": {
+    "name": "Jaehoon Lee",
+    "url": "https://github.com/dev-jaehoonlee"
+  },
+  "homepage": "https://github.com/dev-jaehoonlee/natural-korean#readme",
+  "repository": "https://github.com/dev-jaehoonlee/natural-korean",
+  "license": "MIT",
+  "outputStyles": "./output-styles/",
+  "keywords": [
+    "한국어",
+    "윤문",
+    "교정",
+    "가독성",
+    "korean",
+    "writing",
+    "proofreading"
+  ]
+}

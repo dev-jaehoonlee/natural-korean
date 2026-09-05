@@ -1,0 +1,20 @@
+{
+  "name": "natural-korean-marketplace",
+  "interface": {
+    "displayName": "Natural Korean Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "natural-korean",
+      "source": {
+        "source": "local",
+        "path": "./plugins/natural-korean"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

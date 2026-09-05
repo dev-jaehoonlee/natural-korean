@@ -1,0 +1,22 @@
+{
+  "name": "natural-korean-marketplace",
+  "owner": {
+    "name": "Jaehoon Lee"
+  },
+  "metadata": {
+    "description": "Natural Korean Claude Code 플러그인 배포용 마켓플레이스"
+  },
+  "plugins": [
+    {
+      "name": "natural-korean",
+      "source": "./plugins/natural-korean",
+      "description": "명료하고 자연스러운 한국어를 위한 출력 스타일 2종과 교정 스킬",
+      "category": "productivity",
+      "tags": [
+        "korean",
+        "writing",
+        "proofreading"
+      ]
+    }
+  ]
+}

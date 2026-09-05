@@ -1,0 +1,41 @@
+name: Validate plugins
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22"
+      - name: Validate Claude Code manifests
+        run: |
+          npx --yes --package @anthropic-ai/claude-code@2.1.63 claude plugin validate plugins/natural-korean/.claude-plugin/plugin.json
+          npx --yes --package @anthropic-ai/claude-code@2.1.63 claude plugin validate .claude-plugin/marketplace.json
+      - name: Check package consistency
+        run: node scripts/check-package.mjs
+      - name: Test package checks
+        run: node --test scripts/check-package.test.mjs
+      - name: Verify isolated installation and activation
+        run: node scripts/smoke-install.mjs
+      - name: Check whitespace
+        run: git show --format= --check HEAD

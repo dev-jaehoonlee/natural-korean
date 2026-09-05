@@ -1,0 +1,35 @@
+{
+  "name": "natural-korean",
+  "version": "1.0.0",
+  "description": "원문의 뜻과 어체를 지키고 요청한 범위에서 한국어 문장과 문서를 교정·윤문하는 스킬입니다.",
+  "author": {
+    "name": "Jaehoon Lee",
+    "url": "https://github.com/dev-jaehoonlee"
+  },
+  "homepage": "https://github.com/dev-jaehoonlee/natural-korean#readme",
+  "repository": "https://github.com/dev-jaehoonlee/natural-korean",
+  "license": "MIT",
+  "keywords": [
+    "한국어",
+    "윤문",
+    "교정",
+    "가독성",
+    "korean",
+    "writing",
+    "proofreading"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Natural Korean",
+    "shortDescription": "뜻과 어체를 지키며 요청한 범위에서 다듬는 한국어 교정",
+    "longDescription": "한국어 문장과 문서의 맞춤법, 띄어쓰기, 번역투와 불분명한 표현을 다듬습니다. 원문의 어체와 사용자가 지정한 수정 범위·결과 형식을 존중합니다. 사실, 수치, 인용, 조건과 확신의 정도를 보존하고, 이미 정확하고 자연스러운 문장은 유지합니다.",
+    "developerName": "Jaehoon Lee",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://github.com/dev-jaehoonlee/natural-korean",
+    "defaultPrompt": [
+      "이 글을 자연스럽게 다듬고 중요한 수정 이유만 알려 줘.",
+      "이 문서의 번역투와 불분명한 표현을 다듬어 줘."
+    ]
+  }
+}
